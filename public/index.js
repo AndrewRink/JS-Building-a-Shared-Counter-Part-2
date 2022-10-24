@@ -12,7 +12,7 @@ async function main(){
     function increment(){
         countValue++;
         countContainer.textContent = countValue;
-
+        //Patching in the updated value on the counter
         fetch('http://localhost:9001/counter',{
         method: 'PATCH',
         headers:{
@@ -28,7 +28,7 @@ async function main(){
     function decrement(){
         countValue--;
         countContainer.textContent = countValue;
-
+        //Used same function as above to save decreases in counter amount
         fetch('http://localhost:9001/counter',{
         method: 'PATCH',
         headers:{
